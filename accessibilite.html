@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Le Grand Oral Citoyen</title>
+        <link rel="stylesheet" type="text/css" href="scripts/style.css" media="screen" title="Default">
+        <script src="scripts/script.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <img id="logo" src="images/logo_GOC.png" alt="Logo du Grand Oral Citoyen">
+            <h1>Le Grand Oral Citoyen</h1>
+            <h2 class="subtitle">Une idée originale d'El Yamine Soum</h2>
+        </header>
+        
+
+        <nav class="menu">
+
+            <button class="search-toggle" aria-label="Rechercher">
+                <span class="loupe-icon">🔍</span>
+            </button>
+        
+            <div class="search-container">
+                <form id="search-form" action="search.php" method="GET">
+                    <input type="text" id="search-bar" name="query" placeholder="Rechercher..." aria-label="Rechercher sur le site">
+                </form>
+            </div>
+            
+            <div id="results"></div>
+
+            <div class="controls">
+                <button aria-label="Zoom avant" onclick="changeZoom('increase')">+</button>
+                <button aria-label="Zoom arrière" onclick="changeZoom('decrease')">–</button>
+            </div>
+
+            <div class="mode">
+                <button aria-label="Changer mode" id="modeToggle">☾</button>
+            </div>
+    
+            <ul class="main-menu">
+                <li><a href="index.html">Accueil ▾</a></li>
+                <li><a href="contenu/concours.html">Parcours ▾</a></li>
+                <li><a href="contenu/agenda/agenda.php">Agenda</a></li>
+                <li><a href="contenu/partenaires.html">Partenaires</a></li>
+                <li><a href="contenu/contact/contact.php">Contact</a></li>
+            </ul>
+
+        </nav>
+
+            <!-- SYMBOLE MENU BURGER -->
+            <div class="burger" id="burger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <!-- MENU BURGER -->
+            <div class="burger-menu" id="burgerMenu">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="contenu/concours.html">Parcours</a></li>
+                    <li><a href="contenu/agenda/agenda.php">Agenda</a></li>
+                    <li><a href="contenu/partenaires.html">Partenaires</a></li>
+                    <li><a href="contenu/contact/contact.php">Contact</a></li>
+                </ul>
+            </div>
+
+        <main class="accessibilite">
+            <h2>Accessibilité du site Le Grand Oral Citoyen</h2>
+
+                <section>
+                    <h3>Notre engagement pour l'accessibilité</h3>
+                    <p>Le site Le Grand Oral Citoyen a été conçu pour offrir une expérience utilisateur fluide et accessible à tous, notamment aux personnes en situation de handicap. Nous avons mis en place plusieurs mesures pour garantir une utilisation facile et optimale, quel que soit le dispositif ou la technologie utilisée.</p>
+                </section>
+
+                <section>
+                    <h3>Outils de validation et d'audit</h3>
+                    <p>Voici les outils utilisés pour vérifier l'accessibilité du site :</p>
+                        <ul>
+                            <li>
+                            <a href="https://wave.webaim.org/" target="_blank" rel="noopener noreferrer"><span class="label">WAVE Web Accessibility Evaluation Tool</a>:</span> Cet outil nous permet d'analyser l'accessibilité de chaque page et d'identifier les erreurs ou les éléments à améliorer.
+                            </li>
+                            <li>
+                            <a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">W3C Validator</a> : Le validateur HTML et CSS du W3C nous assure que notre code respecte les normes de qualité et d'accessibilité en ligne.
+                            </li>
+                            <li>
+                            <a href="https://color.a11y.com/" target="_blank" rel="noopener noreferrer">Color Contrast Analyzer</a>: Cet outil est utilisé pour tester le contraste des couleurs afin de garantir qu'il est suffisant pour les personnes malvoyantes, en particulier pour les textes et les arrière-plans.
+                            </li>
+                        </ul>
+                </section>
+
+                <section>
+                    <h3>Accessibilité mobile et responsive</h3>
+                    <p>Le site a été conçu pour être entièrement responsive, c'est-à-dire qu'il s'adapte à tous les types d'écrans, qu'il s'agisse de smartphones, tablettes ou ordinateurs. Ainsi, vous pourrez naviguer facilement sur le site, quel que soit le dispositif utilisé.</p>
+                    <p>Nous avons pris en compte les critères d'accessibilité pour garantir une navigation sans entrave sur tous les appareils, avec une taille de texte adaptée et un agencement des éléments cohérent.</p>
+                </section>
+
+                <section>
+                    <h3>Navigation au clavier et support VoiceOver</h3>
+                    <p>Le site est conçu pour être complètement navigable au clavier, ce qui signifie qu'il est possible de se déplacer entre les liens, les boutons et les sections sans avoir besoin d'une souris.</p>
+                    <p>De plus, le site est compatible avec les technologies d’assistance telles que VoiceOver sur macOS et iOS. Les éléments interactifs sont bien étiquetés et accessibles aux lecteurs d'écran.</p>
+                </section>
+
+                <section>
+                    <h3>Conclusion</h3>
+                    <p>Nous restons engagés dans l'amélioration continue de l'accessibilité de notre site pour offrir une expérience inclusive à tous nos utilisateurs. Si vous avez des suggestions ou des commentaires sur l'accessibilité, n'hésitez pas à nous <a href="contenu/contact/contact.php">contacter</a>.</p>
+                </section>
+        </main>
+
+   <footer>
+            <div class="footer-groupe">
+                <div class="footer-logo">
+                    <img src="images/logo_GOC.png" alt="Logo de l'association du Grand Oral Citoyen">
+                </div>
+
+                <div class="footer-nav">
+                    <a id="admin-button" aria-label="se connecter" href="contenu/administration/connexion/connexion.php">Se connecter</a>
+                </div>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Nous contacter</h4>
+                <p>Téléphone : <a href="tel:+33666635030">06 66 63 50 30</a></p> 
+                <a href="contenu/contact/contact.php">Contactez-nous ici</a>            
+            </div>
+
+            <div class="footer-reseau">
+                <h4>Nous suivre</h4>
+                <div class="instagram">
+                    <a href="https://www.instagram.com/legrandoralcitoyen_/" target="_blank">Instagram
+                        <img src="images/logo_instagram.jpeg" alt="Logo Instagram" class="instagram-logo">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-autre">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Le Grand Oral Citoyen</p>
+                    <p>Dernière mise à jour <span id="date-mise-a-jour"></span></p>
+                </div>
+
+                <div class="footer-mentions">
+                    <a href="mentions_legales.html">Mentions légales</a>
+                    <a href="accessibilite.html">Accessibilité</a>   
+                </div>
+            </div>
+        </footer>
+
+        <button id="btnTop" onclick="scrollToTop()" aria-label="Remonter en haut de la page">↑</button>
+
+    </body>
+</html>
+
